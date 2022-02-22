@@ -12,7 +12,7 @@ defmodule Adventod2015 do
       :world
 
   """
-  def hello do
-    :world
+  def deliver do
+    :ok
   end
 end
