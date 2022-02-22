@@ -16,6 +16,7 @@ defmodule Adventod2015 do
     path
     |> String.to_charlist()
     |> handle_chars([{0, 0}])
+    |> Enum.group_by(& &1)
     |> Enum.count()
   end
 
