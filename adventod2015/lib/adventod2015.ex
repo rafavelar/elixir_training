@@ -15,6 +15,8 @@ defmodule Adventod2015 do
   def deliver(path) do
     path
     |> String.to_charlist()
+    |> handle_chars([{0, 0}])
+    |> Enum.count()
   end
 
   defp handle_chars([h | t], coords),
