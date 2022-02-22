@@ -19,6 +19,8 @@ defmodule Adventod2015 do
     |> Enum.count()
   end
 
+  defp handle_chars([], coords), do: coords
+
   defp handle_chars([h | t], coords),
     do: handle_chars(t, coords ++ handle_coords(h, Enum.take(coords, -1)))
 
