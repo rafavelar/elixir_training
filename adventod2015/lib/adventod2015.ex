@@ -26,10 +26,10 @@ defmodule Adventod2015 do
 
   defp handle_coords(char, [{x, y} | t]) do
     cond do
-      char == "<" -> [{x, y - 1}]
-      char == ">" -> [{x, y + 1}]
-      char == "^" -> [{x + 1, y}]
-      char == "v" -> [{x - 1, y}]
+      char == ?< -> [{x, y - 1}]
+      char == ?> -> [{x, y + 1}]
+      char == ?^ -> [{x + 1, y}]
+      char == ?v -> [{x - 1, y}]
     end
   end
 end
