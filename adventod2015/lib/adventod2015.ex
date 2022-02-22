@@ -17,6 +17,9 @@ defmodule Adventod2015 do
     |> String.to_charlist()
   end
 
+  defp handle_chars([h | t], coords),
+    do: handle_chars(t, coords ++ handle_coords(h, Enum.take(coords, -1)))
+
   defp handle_coords(char, [{x, y} | t]) do
     cond do
       char == "<" -> [{x, y - 1}]
