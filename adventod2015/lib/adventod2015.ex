@@ -12,7 +12,8 @@ defmodule Adventod2015 do
       :world
 
   """
-  def deliver do
-    :ok
+  def deliver(path) do
+    path
+    |> String.to_charlist()
   end
 end
